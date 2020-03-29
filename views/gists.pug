@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    h1 gists
+    p Welcome to My Gists Page
+
+    form(action="/gists/save", method="post")
+        div
+            input(name="name")
+            select(name="type")
+                option(value="C") C
+                option(value="C++") C++
+                option(value="C#") C#
+                option(value="Java") Java
+                option(value="JavaScript") JavaScript
+                option(value="php") PHP
+                option(value="Python") Python
+        div
+            textarea(name="code",cols="30",row="10")
+        div
+            button(type="submit") 保存

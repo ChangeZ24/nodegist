@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    h1= message
+    h2= error.status
+    div
+        a(href="javascript:history.back(1)") 点此返回
+    pre.gray #{error.stack}

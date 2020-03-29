@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    div.menu
+      a(href="/") 首页
+      -if(user && user.login)
+        a(href="/gists/main") 我的代码
+        a(href="/users/logout") 退出登陆#{user.login}
+      -else
+        a(href="/users/login") 登陆
+    block content
